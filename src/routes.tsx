@@ -4,7 +4,7 @@ import { AppLayout } from './pages/_layout/app'
 
 import { NotFound } from './pages/404'
 import { Error } from './pages/error'
-
+import { AthletesProfile } from './pages/app//dashboard/athlete-profile'
 import { Dashboard } from './pages/app/dashboard/dashboard'
 
 export const router = createBrowserRouter([
@@ -14,7 +14,10 @@ export const router = createBrowserRouter([
 
     errorElement: <Error />,
 
-    children: [{ path: '/', element: <Dashboard /> }],
+    children: [{ path: '/', element: <Dashboard /> },
+    { path: '/athlete-profile', element: <AthletesProfile /> },
+  ],
+    
   },
 
   {
